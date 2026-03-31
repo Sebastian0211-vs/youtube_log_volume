@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Log Volume",
+  "version": "1.0",
+  "description": "Remaps YouTube's linear volume slider to a logarithmic curve for perceptually even volume control.",
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["*://www.youtube.com/*"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png"
+  }
+}
